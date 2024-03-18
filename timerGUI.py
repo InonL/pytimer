@@ -45,6 +45,7 @@ class timerGUI:
         self.ttBox = tk.Entry(self.root)
         self.ttBox.bind("<Key>", lambda a: "break") # prevents textbox from being overriden by user
         self.ttBox.grid(row=1, column=4, sticky=tk.E+tk.W, padx=(20,20))
+        self.ttBox.insert(0,"0")
         
         self.etBox = tk.Entry(self.root)
         self.etBox.bind("<Key>", lambda a: "break") # prevents textbox from being overriden by user
@@ -94,6 +95,7 @@ class timerGUI:
         self.finish = True
         self.timerRun = False
         self.ttBox.delete(0, 'end')
+        self.ttBox.insert(0,"0")
         self.etBox.delete(0, 'end')
         self.etBox.insert(0,"0.00")
         self.pausedTime = timedelta(0) # reset the passed time
