@@ -42,9 +42,11 @@ class timerGUI:
         self.elapsedTime.grid(row=0, column=5, sticky=tk.W+tk.E+tk.N, padx=(20,20))
 
         self.ttBox = tk.Entry(self.root)
+        self.ttBox.bind("<Key>", lambda a: "break") # prevents textbox from being overriden by user
         self.ttBox.grid(row=1, column=4, sticky=tk.E+tk.W, padx=(20,20))
         
         self.etBox = tk.Entry(self.root)
+        self.etBox.bind("<Key>", lambda a: "break") # prevents textbox from being overriden by user
         self.etBox.grid(row=1, column=5, sticky=tk.E+tk.W, padx=(20,20))
         self.etBox.insert(0,"0.00")
         ### GUI definition ---------------------------
