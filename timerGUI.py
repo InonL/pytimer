@@ -15,6 +15,7 @@ class timerGUI:
         self.targetTime = '0'
 
         ### GUI definition ---------------------------
+        self.root.title("Python Timer")
         self.buttonFrame = tk.Frame(self.root)
 
         for i in range(3):
